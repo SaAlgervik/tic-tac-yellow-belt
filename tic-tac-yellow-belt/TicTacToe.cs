@@ -31,11 +31,10 @@ public class TicTacToe
         if (isPlayer)
         {
             Board[row, col] = PlayerMark;
-            
             return;
         }
 
-        Board[0, i - 1] = BotMark;
+        Board[row, col] = BotMark;
     }
 
     public static int BotMove()
