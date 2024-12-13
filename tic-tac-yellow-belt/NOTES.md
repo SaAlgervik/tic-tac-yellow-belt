@@ -24,10 +24,15 @@ Pomo 2:
 * Create a way to take turns  ✅
 
 Pomo 3:
-* Create rules for the bot
-  * Add US 
-  * Create tests for the bot
-* Check if move is valid
+* Create rules for the bot ✅
+  * Add US  ✅
+  * Create tests for the bot ⚠️ ✅
+* Check if move is valid ❌
+
+Pomo 4:
+* Create tests for the bot 
+* Rules for bot to not take spot that is taken
+* Rules for player to not take spot that is taken
 
 
 
