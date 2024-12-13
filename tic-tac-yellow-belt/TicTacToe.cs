@@ -39,6 +39,22 @@ public class TicTacToe
 
     public static int BotMove()
     {
-        return new Random().Next(1, 10);
+        var canMakeMove = false;
+        var botPosition = 0;
+
+        while (!canMakeMove)
+        {
+            botPosition = new Random().Next(1, 10);
+
+            var row = (botPosition - 1) / 3;
+            var col = (botPosition - 1) % 3;
+            
+            if(Board[row, col] != PlayerMark)
+            {
+                canMakeMove = true;
+            }
+        }
+
+        return botPosition;
     }
 }
