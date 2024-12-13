@@ -3,8 +3,9 @@
 public class TicTacToe
 {
     private const char PlayerMark = 'X';
+    private const char BotMark = '0';
 
-    private static char[,] _board =
+    private static readonly char[,] Board =
     {
         { '1', '2', '3' },
         { '4', '5', '6' },
@@ -14,11 +15,11 @@ public class TicTacToe
     public static void PrintBord()
     {
         Console.WriteLine("==========");
-        Console.WriteLine($" {_board[0, 0]} | {_board[0, 1]} | {_board[0, 2]} ");
+        Console.WriteLine($" {Board[0, 0]} | {Board[0, 1]} | {Board[0, 2]} ");
         Console.WriteLine("---+---+---");
-        Console.WriteLine($" {_board[1, 0]} | {_board[1, 1]} | {_board[1, 2]} ");
+        Console.WriteLine($" {Board[1, 0]} | {Board[1, 1]} | {Board[1, 2]} ");
         Console.WriteLine("---+---+---");
-        Console.WriteLine($" {_board[2, 0]} | {_board[2, 1]} | {_board[2, 2]} ");
+        Console.WriteLine($" {Board[2, 0]} | {Board[2, 1]} | {Board[2, 2]} ");
         Console.WriteLine("==========");
     }
 
@@ -26,10 +27,10 @@ public class TicTacToe
     {
         if (isPlayer)
         {
-            _board[0, i - 1] = PlayerMark;
+            Board[0, i - 1] = PlayerMark;
             return;
         }
 
-        _board[0, i - 1] = '0';
+        Board[0, i - 1] = BotMark;
     }
 }

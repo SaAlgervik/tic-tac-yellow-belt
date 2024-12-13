@@ -19,7 +19,7 @@ public class TicTacToeTests
     }
     
     [Fact(DisplayName = "When player picks number one, then the number should be replaced with X")]
-    public void PlayerMove_WhenPlayerPicksOne_ThenTheNumberShouldBeReplacedWithX()
+    public void SelectSquare_WhenPlayerPicksOne_ThenTheNumberShouldBeReplacedWithX()
     {
         const string expectedOutput = "==========\r\n X | 2 | 3 \r\n---+---+---\r\n 4 | 5 | 6 \r\n---+---+---\r\n 7 | 8 | 9 \r\n==========\r\n";
         var stringWriter = new StringWriter();
