@@ -16,3 +16,9 @@ Write user stories for the game ✅
 Create the game board ✅
 Create player ❌
 Create bot ❌
+
+
+Pomo 2:
+Create player 
+Create bot
+Create a wat to take turns 
