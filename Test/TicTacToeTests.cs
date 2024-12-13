@@ -47,4 +47,12 @@ public class TicTacToeTests
         var output = stringWriter.ToString();
         output.Should().Be(expectedOutput);
     }
+    
+    [Fact]
+    public void BotMove_WhenBotTurn_ShouldPickBetweenOneAndNine()
+    {
+        var botTurn = TicTacToe.BotMove();
+
+        botTurn.Should().BeInRange(1, 9);
+    }
 }

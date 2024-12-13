@@ -33,4 +33,9 @@ public class TicTacToe
 
         Board[0, i - 1] = BotMark;
     }
+
+    public static int BotMove()
+    {
+        throw new NotImplementedException();
+    }
 }
