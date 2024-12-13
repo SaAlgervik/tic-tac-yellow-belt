@@ -48,7 +48,7 @@ public class TicTacToeTests
         output.Should().Be(expectedOutput);
     }
     
-    [Fact]
+    [Fact(DisplayName = "When bot turn, then the bot should pick between one and nine")]
     public void BotMove_WhenBotTurn_ShouldPickBetweenOneAndNine()
     {
         var botTurn = TicTacToe.BotMove();
