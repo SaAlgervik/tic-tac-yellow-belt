@@ -49,7 +49,7 @@ public class TicTacToeTests
     }
     
     [Fact(DisplayName = "When player picks a number between 1-9, then the number should not be replaced with X")]
-    public void SelectSquare_WhenPlayerPicksTakenNumber_ThenTheNumberShouldNotBeReplacedWithX()
+    public void SelectSquare_WhenPlayerPicksNumberBetweenOneAndNine_ThenTheNumberShouldBeReplacedWithX()
     {
         const string expectedOutput = "==========\r\n X | X | X \r\n---+---+---\r\n X | X | X \r\n---+---+---\r\n X | X | X \r\n==========\r\n";
         var stringWriter = new StringWriter();
