@@ -25,9 +25,13 @@ public class TicTacToe
 
     public static void SelectSquare(int i, bool isPlayer = true)
     {
+        var row = (i - 1) / 3;
+        var col = (i - 1) % 3;
+        
         if (isPlayer)
         {
-            Board[0, i - 1] = PlayerMark;
+            Board[row, col] = PlayerMark;
+            
             return;
         }
 
