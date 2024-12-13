@@ -24,6 +24,12 @@ public class TicTacToe
 
     public static void SelectSquare(int i, bool isPlayer = true)
     {
-        _board[0, i -1] = PlayerMark;     
+        if (isPlayer)
+        {
+            _board[0, i - 1] = PlayerMark;
+            return;
+        }
+
+        _board[0, i - 1] = '0';
     }
 }
