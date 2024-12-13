@@ -25,7 +25,7 @@ Pomo 2:
 
 Pomo 3:
 * Create rules for the bot
-  * Add to UAT 
+  * Add US 
   * Create tests for the bot
 * Check if move is valid
 

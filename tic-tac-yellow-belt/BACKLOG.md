@@ -16,6 +16,13 @@ If the game is a tie I want to be notified that the game is a tie
 
 As a user I don't want to have a other person the play against, so I want to play against a bot
 
+As a bot I should be able to play the game
+
+As a bot I can pick a random square between 1-9 to place my piece
+
+As a player I can pick a random square between 1-9 to place my piece
+
+
 ## UAT
 
 Given I am on the game board
