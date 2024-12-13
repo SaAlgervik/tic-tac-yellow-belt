@@ -6,4 +6,9 @@ public class TicTacToe
     {
         return true;
     }
+
+    public static void PrintBord()
+    {
+        throw new NotImplementedException();
+    }
 }

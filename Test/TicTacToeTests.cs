@@ -1,13 +1,20 @@
-﻿using tic_tac_yellow_belt;
+﻿using FluentAssertions;
+using tic_tac_yellow_belt;
 
 namespace Test;
 
 public class TicTacToeTests
 {
-    [Fact(DisplayName = "Test")]
-    public void Test()
+    [Fact(DisplayName = "When player starts game, then a empty game bord should be printed")]
+    public void PrintBord_WhenPlayerStartsGame_ThenGameBordShouldBePrinted()
     { 
-        var ticTacToe = new TicTacToe();
-        Assert.True(ticTacToe.Method1());
+        const string expectedOutput = "==========\r\n 1 | 2 | 3 \r\n---+---+---\r\n 4 | 5 | 6 \r\n---+---+---\r\n 7 | 8 | 9 \r\n==========\r\n";
+        var stringWriter = new StringWriter();
+        Console.SetOut(stringWriter);
+        
+        TicTacToe.PrintBord();   
+        
+        var output = stringWriter.ToString();
+        output.Should().Be(expectedOutput);
     }
 }
