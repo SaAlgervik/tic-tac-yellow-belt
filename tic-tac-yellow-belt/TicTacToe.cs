@@ -22,7 +22,7 @@ public class TicTacToe
         Console.WriteLine("==========");
     }
 
-    public static void SelectSquare(int i)
+    public static void SelectSquare(int i, bool isPlayer = true)
     {
         _board[0, i -1] = PlayerMark;     
     }
