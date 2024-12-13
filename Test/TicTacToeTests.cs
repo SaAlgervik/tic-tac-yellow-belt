@@ -120,7 +120,9 @@ public class TicTacToeTests
         TicTacToe.SelectSquare(7);
         TicTacToe.SelectSquare(8);
         
+        TicTacToe.PrintBord();
         var botTurn = TicTacToe.BotMove();
+       
         
         botTurn.Should().Be(9);
     }
@@ -138,9 +140,9 @@ public class TicTacToeTests
         TicTacToe.SelectSquare(8, false);
         TicTacToe.SelectSquare(9, false);
         
+        TicTacToe.PrintBord();
         var botTurn = TicTacToe.BotMove();
         
         botTurn.Should().Be(5);
     }
-
 }
