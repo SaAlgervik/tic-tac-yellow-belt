@@ -36,6 +36,6 @@ public class TicTacToe
 
     public static int BotMove()
     {
-        throw new NotImplementedException();
+        return new Random().Next(1, 10);
     }
 }
