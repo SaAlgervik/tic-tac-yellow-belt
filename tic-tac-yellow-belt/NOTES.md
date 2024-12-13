@@ -21,4 +21,4 @@ Create bot ❌
 Pomo 2:
 Create player 
 Create bot
-Create a wat to take turns 
+Create a way to take turns 

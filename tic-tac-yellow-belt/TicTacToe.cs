@@ -2,6 +2,7 @@
 
 public class TicTacToe
 {
+    
     private static char[,] _board =
     {
         { '1', '2', '3' },
@@ -18,5 +19,10 @@ public class TicTacToe
         Console.WriteLine("---+---+---");
         Console.WriteLine($" {_board[2, 0]} | {_board[2, 1]} | {_board[2, 2]} ");
         Console.WriteLine("==========");
+    }
+
+    public static void SelectSquare(int i)
+    {
+        throw new NotImplementedException();
     }
 }
