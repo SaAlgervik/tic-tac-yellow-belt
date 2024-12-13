@@ -23,6 +23,6 @@ public class TicTacToe
 
     public static void SelectSquare(int i)
     {
-        throw new NotImplementedException();
+        _board[0, i -1] = 'X';     
     }
 }
