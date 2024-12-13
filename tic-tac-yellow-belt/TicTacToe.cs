@@ -8,11 +8,6 @@ public class TicTacToe
         { '4', '5', '6' },
         { '7', '8', '9' }
     };
-    
-    public bool Method1()
-    {
-        return true;
-    }
 
     public static void PrintBord()
     {

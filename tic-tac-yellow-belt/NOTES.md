@@ -12,7 +12,7 @@
 
 
 Pomo 1:
-Write user stories for the game
-Create the game board
-Create player 
-Create bot
+Write user stories for the game ✅
+Create the game board ✅
+Create player ❌
+Create bot ❌
