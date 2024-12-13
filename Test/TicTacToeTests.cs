@@ -107,7 +107,7 @@ public class TicTacToeTests
         botTurn.Should().BeInRange(1, 9);
     }
     
-    [Fact(DisplayName = "When bot turn, then the bot should not pick a taken number")]
+    [Fact(DisplayName = "When bot turn, the bot should not pick number taken by player")]
     public void BotMove_WhenAllSquaresButNrNineIsTaken_ThenBotShouldPickNrNine()
     {
         TicTacToe.SelectSquare(1);
