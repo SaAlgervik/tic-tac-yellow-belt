@@ -15,8 +15,8 @@ public class TicTacToeTests
         TicTacToe.PrintBord();   
         
         var output = stringWriter.ToString();
-        output.Should().Be(expectedOutput);
         stringWriter.Close();
+        output.Should().Be(expectedOutput);
     }
     
     [Fact(DisplayName = "When player picks number one, then the number should be replaced with X")]
@@ -31,8 +31,8 @@ public class TicTacToeTests
         TicTacToe.PrintBord();
         
         var output = stringWriter.ToString();
-        output.Should().Be(expectedOutput);
         stringWriter.Close();
+        output.Should().Be(expectedOutput);
     }
     
     [Fact(DisplayName = "When bot picks number one, then the number should be replaced with 0")]
@@ -47,8 +47,8 @@ public class TicTacToeTests
         TicTacToe.PrintBord();
         
         var output = stringWriter.ToString();
-        output.Should().Be(expectedOutput);
         stringWriter.Close();
+        output.Should().Be(expectedOutput);
     }
     
     [Fact(DisplayName = "When player picks a number between 1-9, then the number should not be replaced with X")]
@@ -71,8 +71,8 @@ public class TicTacToeTests
         TicTacToe.PrintBord();
         
         var output = stringWriter.ToString();
-        output.Should().Be(expectedOutput);
         stringWriter.Close();
+        output.Should().Be(expectedOutput);
     }
         
     [Fact(DisplayName = "When bot picks a number between 1-9, then the number should not be replaced with 0")]
@@ -95,8 +95,8 @@ public class TicTacToeTests
         TicTacToe.PrintBord();
         
         var output = stringWriter.ToString();
-        output.Should().Be(expectedOutput);
         stringWriter.Close();
+        output.Should().Be(expectedOutput);
     }
     
     [Fact(DisplayName = "When bot turn, then the bot should pick between one and nine")]
@@ -105,6 +105,7 @@ public class TicTacToeTests
         var botTurn = TicTacToe.BotMove();
 
         botTurn.Should().BeInRange(1, 9);
+        
     }
     
     [Fact(DisplayName = "When bot turn, the bot should not pick number taken by player")]
@@ -123,4 +124,23 @@ public class TicTacToeTests
         
         botTurn.Should().Be(9);
     }
+    
+    [Fact(DisplayName = "When bot turn, the bot should not pick number taken by the bot")]
+    public void BotMove_WhenAllSquaresButNrFiveIsTaken_ThenBotShouldPickNrFive()
+    {
+        TicTacToe.SelectSquare(1, false);
+        TicTacToe.SelectSquare(2, false);
+        TicTacToe.SelectSquare(3, false);
+        TicTacToe.SelectSquare(4, false);
+        
+        TicTacToe.SelectSquare(6, false);
+        TicTacToe.SelectSquare(7, false);
+        TicTacToe.SelectSquare(8, false);
+        TicTacToe.SelectSquare(9, false);
+        
+        var botTurn = TicTacToe.BotMove();
+        
+        botTurn.Should().Be(5);
+    }
+
 }

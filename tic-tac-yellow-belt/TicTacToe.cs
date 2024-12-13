@@ -49,7 +49,7 @@ public class TicTacToe
             var row = (botPosition - 1) / 3;
             var col = (botPosition - 1) % 3;
             
-            if(Board[row, col] != PlayerMark)
+            if(Board[row, col] != PlayerMark && Board[row, col] != BotMark)
             {
                 canMakeMove = true;
             }
