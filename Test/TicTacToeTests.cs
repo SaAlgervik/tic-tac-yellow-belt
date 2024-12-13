@@ -70,7 +70,6 @@ public class TicTacToeTests
         var output = stringWriter.ToString();
         output.Should().Be(expectedOutput);
     }
-    
         
     [Fact(DisplayName = "When bot picks a number between 1-9, then the number should not be replaced with 0")]
     public void SelectSquare_WhenBotPicksNumberBetweenOneAndNine_ThenTheNumberShouldBeReplacedWith0()
@@ -95,8 +94,6 @@ public class TicTacToeTests
         output.Should().Be(expectedOutput);
     }
     
-    
-    
     [Fact(DisplayName = "When bot turn, then the bot should pick between one and nine")]
     public void BotMove_WhenBotTurn_ShouldPickBetweenOneAndNine()
     {
@@ -104,5 +101,21 @@ public class TicTacToeTests
 
         botTurn.Should().BeInRange(1, 9);
     }
- 
+    
+    [Fact(DisplayName = "When bot turn, then the bot should not pick a taken number")]
+    public void BotMove_WhenAllSquaresButNrNineIsTaken_ThenBotShouldPickNrNine()
+    {
+        TicTacToe.SelectSquare(1);
+        TicTacToe.SelectSquare(2);
+        TicTacToe.SelectSquare(3);
+        TicTacToe.SelectSquare(4);
+        TicTacToe.SelectSquare(5);
+        TicTacToe.SelectSquare(6);
+        TicTacToe.SelectSquare(7);
+        TicTacToe.SelectSquare(8);
+        
+        var botTurn = TicTacToe.BotMove();
+        
+        botTurn.Should().Be(9);
+    }
 }
