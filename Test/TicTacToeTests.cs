@@ -71,6 +71,30 @@ public class TicTacToeTests
         output.Should().Be(expectedOutput);
     }
     
+        
+    [Fact(DisplayName = "When bot picks a number between 1-9, then the number should not be replaced with 0")]
+    public void SelectSquare_WhenBotPicksNumberBetweenOneAndNine_ThenTheNumberShouldBeReplacedWith0()
+    {
+        const string expectedOutput = "==========\r\n 0 | 0 | 0 \r\n---+---+---\r\n 0 | 0 | 0 \r\n---+---+---\r\n 0 | 0 | 0 \r\n==========\r\n";
+        var stringWriter = new StringWriter();
+        Console.SetOut(stringWriter);
+        
+        TicTacToe.SelectSquare(1, false);
+        TicTacToe.SelectSquare(2, false);
+        TicTacToe.SelectSquare(3, false);
+        TicTacToe.SelectSquare(4, false);
+        TicTacToe.SelectSquare(5, false);
+        TicTacToe.SelectSquare(6, false);
+        TicTacToe.SelectSquare(7, false);
+        TicTacToe.SelectSquare(8, false);
+        TicTacToe.SelectSquare(9, false);
+        
+        TicTacToe.PrintBord();
+        
+        var output = stringWriter.ToString();
+        output.Should().Be(expectedOutput);
+    }
+    
     
     
     [Fact(DisplayName = "When bot turn, then the bot should pick between one and nine")]
