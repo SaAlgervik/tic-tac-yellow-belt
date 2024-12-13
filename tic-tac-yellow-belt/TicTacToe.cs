@@ -2,7 +2,8 @@
 
 public class TicTacToe
 {
-    
+    private const char PlayerMark = 'X';
+
     private static char[,] _board =
     {
         { '1', '2', '3' },
@@ -23,6 +24,6 @@ public class TicTacToe
 
     public static void SelectSquare(int i)
     {
-        _board[0, i -1] = 'X';     
+        _board[0, i -1] = PlayerMark;     
     }
 }
